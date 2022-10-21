@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 const db = require('../config/database');
 
-const Message = db.define(
-  'Message',
+const BudgetTransport = db.define(
+  'BudgetTransport',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -34,4 +34,4 @@ const Message = db.define(
   { timestamps: true },
 );
 
-module.exports = Message;
+module.exports = BudgetTransport;

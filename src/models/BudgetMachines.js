@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 const db = require('../config/database');
 
-const Message = db.define(
-  'Message',
+const BudgetMachines = db.define(
+  'BudgetMachines',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,7 +14,7 @@ const Message = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    companyName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -22,16 +22,24 @@ const Message = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    subject: {
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    message: {
-      type: DataTypes.TEXT,
+    comments: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    equipment: {
+      type: DataTypes.JSON,
+      allowNull: false,
+    },
+    time: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
   { timestamps: true },
 );
 
-module.exports = Message;
+module.exports = BudgetMachines;

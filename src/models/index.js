@@ -1,7 +1,8 @@
 const Message = require('./Message');
-const Email = require('./Email');
+const BudgetMachines = require('./BudgetMachines');
+const BudgetTransport = require('./BudgetTransport');
 
-const models = [Email, Message];
+const models = [Message, BudgetMachines, BudgetTransport];
 
 models.forEach(async (model) => await model.sync());
 
